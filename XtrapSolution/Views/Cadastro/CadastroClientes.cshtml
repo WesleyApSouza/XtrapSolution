@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "CadastroClientes";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cadastro de Clientes</title>
+    <script src="~/Scripts/jquery.mask.js"></script>
+    <script>
+        $(document).ready(function ($) {
+            $("#cFone").mask("(99) 9999-9999");
+            alert("SIm");
+        });
+    </script>
+</head>
+<body>
+    <div class="container" id="cliente">
+        <div class="jumbotron text-center" id="titulo">
+            <h1>Cadastro de Clientes</h1>
+        </div>
+        <fieldset id="campoCliente">
+            <legend>Dados do Cliente</legend>
+            <div class="input-group">
+                <span class="input-group-addon">Nome: </span>
+                <input type="text" class="form-control" id="cNome" placeholder="Nome Completo" />
+            </div>
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon">Data de Nascimento:  </span>
+                <input type="date" class="form-control" id="cNasc" />
+            </div>
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon">Cidade: </span>
+                <input type="text" class="form-control" id="cEnd" placeholder="Nome da cidade" />
+            </div>
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon">Rua: </span>
+                <input id="cRua" type="text" class="form-control" placeholder="Nome da Rua">
+            </div>
+            <br />
+
+            <div id="corpo">
+                <div class="input-group">
+                    <span class="input-group-addon">CEP: </span>
+                    <input type="number" class="form-control" id="cCep" placeholder="CEP" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon">Bairro: </span>
+                    <input type="text" class="form-control" id="cBar" placeholder="Bairro" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon">Telefone: </span>
+                    <input type="tel" class="form-control" id="cFone" placeholder="Telefone" data-mask="(00) 0000-00000" />
+                </div>
+                <br />
+                <fieldset id="campoSex">
+                    <legend>Sexo</legend>
+                    <div class="input-group">
+                        <label>Homem: </label>
+                        <input type="radio" name="r" class="form-control" id="cMasc" />
+                    </div>
+                    <br />
+                    <div class="input-group" id="M">
+                        <label>Mulher: </label>
+                        <input type="radio" name="r" class="form-control" id="cFem" />
+                    </div>
+                </fieldset>
+                <br />
+            </div>
+        </fieldset>
+        <div id="btnAction">
+            <button id="btnSalvar" type="button" class="btn btn-primary btn-lg">SALVAR</button>
+            <button id="btnCancelar" type="button" class="btn btn-primary btn-lg">CANCELAR</button>
+        </div>
+    </div>
+</body>
+</html>
