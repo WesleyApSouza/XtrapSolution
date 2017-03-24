@@ -9,8 +9,17 @@
     <meta name="viewport" content="width=device-width" />
     <title>Cadastro de Clientes</title>
     <script>
-        $(document).ready(function ($) {
-            $("#cFone").mask("(99) 9999-9999");
+        $(function () {
+            var SPMaskBehavior = function (val) {
+                return val.replace(/\D/g, "").length === 11 ? "(00) 00000-0000" : "(00) 0000-00009";
+            },
+                spOptions = {
+                    onKeyPress: function (val, e, field, options) {
+                        field.mask(SPMaskBehavior.apply({}, arguments), options);
+                    }
+                };
+
+            $("#cFone").mask(SPMaskBehavior, spOptions);
         });
     </script>
 </head>
@@ -55,7 +64,7 @@
                 <br />
                 <div class="input-group">
                     <span class="input-group-addon">Telefone: </span>
-                    <input type="tel" class="form-control" id="cFone" placeholder="Telefone" data-mask="(00) 0000-00000" />
+                    <input type="tel" class="form-control" id="cFone" placeholder="Telefone"/>
                 </div>
                 <br />
                 <fieldset id="campoSex">
