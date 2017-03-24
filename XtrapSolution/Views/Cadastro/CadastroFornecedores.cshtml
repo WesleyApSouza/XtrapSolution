@@ -8,6 +8,15 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Cadastro Fornecedor</title>
+    @section Scripts {
+        <script>
+                $(document).ready(function (){
+                    $("#fFone").inputmask("mask", { "mask": "(99) 9999-99999" });
+                    $("#eCep").inputmask("mask", { "mask": "99999-999" });
+                    $("#eCnpj").inputmask("mask", { "mask": "99.999.999/9999-99" });
+                });
+        </script>
+    }
 </head>
 <body>
     <div class="container" id="fornecedor">
@@ -28,34 +37,34 @@
             <br />
             <div class="input-group">
                 <span class="input-group-addon">Descrição: </span>
-                <input type="text" class="form-control" id="Fdesc" placeholder="Descrição do Vendedor" />
+                <input type="text" class="form-control" id="fDesc" placeholder="Descrição do Vendedor" />
             </div>
             <br />
             <div class="input-group">
                 <spam class="input-group-addon"><i class="glyphicon glyphicon-user"></i></spam>
-                <input type="email" class="form-control" id="Femail" placeholder="Email" />
+                <input type="email" class="form-control" id="fEmail" placeholder="Email" />
             </div>
         </fieldset>
         <fieldset id="campoEmpresa">
             <legend>Dados da Empresa</legend>
             <div class="input-group">
                 <span class="input-group-addon">Nome: </span>
-                <input type="text" class="form-control" id="Ename" placeholder="Nome da Empresa" />
+                <input type="text" class="form-control" id="eName" placeholder="Nome da Empresa" />
             </div>
             <br />
             <div class="input-group">
                 <span class="input-group-addon">Cidade: </span>
-                <input type="text" class="form-control" id="Ecidade" placeholder="Nome da cidade" />
+                <input type="text" class="form-control" id="eCidade" placeholder="Nome da cidade" />
             </div>
             <br />
             <div class="input-group">
                 <span class="input-group-addon">CEP: </span>
-                <input type="number" class="form-control" id="Ecep" placeholder="CEP" />
+                <input type="text" class="form-control" id="eCep" placeholder="CEP" />
             </div>
             <br />
             <div class="input-group">
                 <span class="input-group-addon">CNPJ: </span>
-                <input type="text" class="form-control" id="Ecnpj" placeholder="CNJP" />
+                <input type="text" class="form-control" id="eCnpj" placeholder="CNJP" />
             </div>
             <!--implementar Tipo de Produtos:-->
         </fieldset>

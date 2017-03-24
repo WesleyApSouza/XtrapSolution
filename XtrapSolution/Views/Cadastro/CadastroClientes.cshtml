@@ -8,20 +8,14 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Cadastro de Clientes</title>
-    <script>
-        $(function () {
-            var SPMaskBehavior = function (val) {
-                return val.replace(/\D/g, "").length === 11 ? "(00) 00000-0000" : "(00) 0000-00009";
-            },
-                spOptions = {
-                    onKeyPress: function (val, e, field, options) {
-                        field.mask(SPMaskBehavior.apply({}, arguments), options);
-                    }
-                };
-
-            $("#cFone").mask(SPMaskBehavior, spOptions);
-        });
+    @section Scripts {
+            <script>
+                $(document).ready(function (){
+                    $("#cFone").inputmask("mask", { "mask": "(99) 9999-99999" });
+                    $("#cCep").inputmask("mask", {"mask": "99999-999" });
+                });
     </script>
+}
 </head>
 <body>
     <div class="container" id="cliente">
@@ -54,10 +48,10 @@
             <div id="corpo">
                 <div class="input-group">
                     <span class="input-group-addon">CEP: </span>
-                    <input type="number" class="form-control" id="cCep" placeholder="CEP" />
-                </div>
-                <br />
-                <div class="input-group">
+                    <input type="text" class="form-control" id="cCep" placeholder="CEP" />
+            </div>
+            <br />
+            <div class="input-group">
                     <span class="input-group-addon">Bairro: </span>
                     <input type="text" class="form-control" id="cBar" placeholder="Bairro" />
                 </div>
