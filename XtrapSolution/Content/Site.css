@@ -22,37 +22,3 @@ select,
 textarea {
     max-width: 280px;
 }
-div#corpo{
-    position:relative;
-    left:600px;
-    top: -216px;
-}
-div#M{
-    position:relative;
-    left: 100px;
-    top: -83px;
-}
-fieldset#campoForn{
-    margin: 0px 600px 0px 0px;
-}
-fieldset#campoEmpresa {
-    position:relative;
-    margin: 0px 500px 0px 0px;
-    left: 500px;
-    top: -247px;
-}
-button#btnSalvar{
-    margin-right: 30px;
-}
-div#produtos div#btnAction{
-    position:relative;
-    top: -210px;
-}
-div#fornecedor div#btnAction {
-    position: relative;
-    top: -220px;
-}
-div#cliente div#btnAction {
-    position: relative;
-    top: -375px;
-}

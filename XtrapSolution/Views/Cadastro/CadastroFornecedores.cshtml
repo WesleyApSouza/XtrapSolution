@@ -12,6 +12,7 @@
         <script>
                 $(document).ready(function (){
                     $("#fFone").inputmask("mask", { "mask": "(99) 9999-99999" });
+                    $("#fFone_emp").inputmask("mask", { "mask": "(99) 9999-99999" });
                     $("#eCep").inputmask("mask", { "mask": "99999-999" });
                     $("#eCnpj").inputmask("mask", { "mask": "99.999.999/9999-99" });
                 });
@@ -19,56 +20,68 @@
     }
 </head>
 <body>
-    <div class="container" id="fornecedor">
-        <div class="jumbotron text-center">
-            <h1>Cadastro de Fornecedores</h1>
+    <div class="jumbotron text-center">
+        <h1>Cadastro de Fornecedores</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-5 col-md-6">
+            <fieldset id="campoFor">
+                <legend>Dados do Vendedor</legend>
+                <div class="input-group">
+                    <span class="input-group-addon">Nome: </span>
+                    <input type="text" class="form-control" id="fName" placeholder="Nome do Vendedor" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon">Telefone: </span>
+                    <input type="tel" class=" form-control" id="fFone" placeholder="(XX) XXXX-XXXXX" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon">Descrição: </span>
+                    <input type="text" class="form-control" id="fDesc" placeholder="Descrição do Vendedor" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <spam class="input-group-addon"><i class="glyphicon glyphicon-user"></i></spam>
+                    <input type="email" class="form-control" id="fEmail" placeholder="Email" />
+                </div>
+            </fieldset>
         </div>
-        <fieldset id="campoForn">
-            <legend>Dados do Vendedor</legend>
-            <div class="input-group">
-                <span class="input-group-addon">Nome: </span>
-                <input type="text" class="form-control" id="fName" placeholder="Nome do Vendedor" />
-            </div>
-            <br />
-            <div class="input-group">
-                <span class="input-group-addon">Telefone: </span>
-                <input type="tel" class=" form-control" id="fFone" placeholder="(XX) XXXX-XXXXX" />
-            </div>
-            <br />
-            <div class="input-group">
-                <span class="input-group-addon">Descrição: </span>
-                <input type="text" class="form-control" id="fDesc" placeholder="Descrição do Vendedor" />
-            </div>
-            <br />
-            <div class="input-group">
-                <spam class="input-group-addon"><i class="glyphicon glyphicon-user"></i></spam>
-                <input type="email" class="form-control" id="fEmail" placeholder="Email" />
-            </div>
-        </fieldset>
-        <fieldset id="campoEmpresa">
-            <legend>Dados da Empresa</legend>
-            <div class="input-group">
-                <span class="input-group-addon">Nome: </span>
-                <input type="text" class="form-control" id="eName" placeholder="Nome da Empresa" />
-            </div>
-            <br />
-            <div class="input-group">
-                <span class="input-group-addon">Cidade: </span>
-                <input type="text" class="form-control" id="eCidade" placeholder="Nome da cidade" />
-            </div>
-            <br />
-            <div class="input-group">
-                <span class="input-group-addon">CEP: </span>
-                <input type="text" class="form-control" id="eCep" placeholder="CEP" />
-            </div>
-            <br />
-            <div class="input-group">
-                <span class="input-group-addon">CNPJ: </span>
-                <input type="text" class="form-control" id="eCnpj" placeholder="CNJP" />
-            </div>
-            <!--implementar Tipo de Produtos:-->
-        </fieldset>
-        <div id="btnAction">
+        <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">
+            <fieldset id="campoEmpres">
+                <legend>Dados da Empresa</legend>
+                <div class="input-group">
+                    <span class="input-group-addon">Nome: </span>
+                    <input type="text" class="form-control" id="eName" placeholder="Nome da Empresa" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon">Telefone: </span>
+                    <input type="tel" class=" form-control" id="fFone_emp" placeholder="(XX) XXXX-XXXXX" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon">Cidade: </span>
+                    <input type="text" class="form-control" id="eCidade" placeholder="Nome da cidade" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon">CEP: </span>
+                    <input type="text" class="form-control" id="eCep" placeholder="CEP" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon">CNPJ: </span>
+                    <input type="text" class="form-control" id="eCnpj" placeholder="CNJP" />
+                </div>
+                <!--implementar Tipo de Produtos:-->
+            </fieldset>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-4">
             <button id="btnSalvar" type="button" class="btn btn-primary btn-lg">SALVAR</button>
             <button id="btnCancelar" type="button" class="btn btn-primary btn-lg">CANCELAR</button>
         </div>

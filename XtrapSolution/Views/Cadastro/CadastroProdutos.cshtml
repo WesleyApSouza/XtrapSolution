@@ -10,64 +10,71 @@
     <title>Cadastro Produtos</title>
 </head>
 <body>
-    <div class="container" id="produtos">
-        <div class="jumbotron text-center" id="titulo">
-            <h1>Cadastro de Produtos</h1>
-        </div>
-        <fieldset id="campoProd">
-            <legend>Dados do Produto</legend>
-            <div class="input-group">
-                <span class="input-group-addon">Codigo de Barras: </span>
-                <input type="text" class="form-control" id="cod" placeholder="Codigo de Barras" />
-            </div>
-            <br />
-            <div class="input-group">
-                <span class="input-group-addon">Data de Vencimento:  </span>
-                <input type="date" class="form-control" id="venci" />
-            </div>
-            <br />
-            <div class="input-group">
-                <span class="input-group-addon">Valor da Compra(UN): </span>
-                <input type="number" class="form-control" id="valComp" placeholder="Entre com valor da unidade" />
-            </div>
-            <br />
-            <div class="input-group">
-                <span class="input-group-addon">Valor da Revenda(UN):</span>
-                <input id="valRev" type="number" class="form-control" placeholder="Entre com valor da revenda">
-            </div>
-            <br />
-
-            <div id="corpo">
-                <div class="input-group">
-                    <span class="input-group-addon">Descrição: </span>
-                    <input type="text" class="form-control" id="desc" placeholder="Descrição" />
-                </div>
-                <br />
-                <div class="input-group">
-                    <span class="input-group-addon">Categoria: </span>
-                    <select class="form-control" id="listCate">
-                        <option>categoria</option>
-                    </select>
-                </div>
-                <br />
-                <div class="input-group">
-                    <span class="input-group-addon">Fornecedor: </span>
-                    <select class="form-control" id="listForn">
-                        <option>fornecedor</option>
-                    </select>
-                </div>
-                <br />
-                <div class="input-group">
-                    <span class="input-group-addon">Quantidade: </span>
-                    <input type="number" class="form-control" id="qnt" placeholder="Entre com a quantidade de produto" />
-                </div>
-                <br />
-            </div>
-        </fieldset>
-        <div id="btnAction">
-            <button id="btnSalvar" type="button" class="btn btn-primary btn-lg">SALVAR</button>
-            <button id="btnCancelar" type="button" class="btn btn-primary btn-lg">CANCELAR</button>
-        </div>
+    <div class="jumbotron text-center" id="titulo">
+         <h1>Cadastro de Produtos</h1>
     </div>
+    <fieldset id="campoProd">
+        <legend>Dados do Produto</legend>
+        <div class="row">
+            <div class="col-sm-5 col-md-6">
+                <div class="input-group">
+                    <span class="input-group-addon">Codigo de Barras: </span>
+                    <input type="text" class="form-control" id="cod" placeholder="Codigo de Barras" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon">Data de Vencimento:  </span>
+                    <input type="date" class="form-control" id="venci" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon">Valor da Compra(UN): </span>
+                    <input type="number" class="form-control" id="valComp" placeholder="Entre com valor da unidade" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon">Valor da Revenda(UN):</span>
+                    <input id="valRev" type="number" class="form-control" placeholder="Entre com valor da revenda">
+                </div>
+                <br />
+            </div>
+            <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">
+                <div id="corpo">
+                    <div class="input-group">
+                        <span class="input-group-addon">Descrição: </span>
+                        <input type="text" class="form-control" id="desc" placeholder="Descrição" />
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon">Categoria: </span>
+                        <select class="form-control" id="listCate">
+                            <option>categoria</option>
+                        </select>
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon">Fornecedor: </span>
+                        <select class="form-control" id="listForn">
+                            <option>fornecedor</option>
+                        </select>
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon">Quantidade: </span>
+                        <input type="number" class="form-control" id="qnt" placeholder="Entre com a quantidade de produto" />
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div id="btnAction">
+                    <button id="btnSalvar" type="button" class="btn btn-primary btn-lg">SALVAR</button>
+                    <button id="btnCancelar" type="button" class="btn btn-primary btn-lg">CANCELAR</button>
+                </div>
+            </div>
+        </div>
+    </fieldset>
 </body>
 </html>

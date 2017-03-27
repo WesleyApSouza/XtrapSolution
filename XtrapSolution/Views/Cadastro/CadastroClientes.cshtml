@@ -18,68 +18,79 @@
 }
 </head>
 <body>
-    <div class="container" id="cliente">
+   
         <div class="jumbotron text-center" id="titulo">
             <h1>Cadastro de Clientes</h1>
         </div>
-        <fieldset id="campoCliente">
-            <legend>Dados do Cliente</legend>
-            <div class="input-group">
-                <span class="input-group-addon">Nome: </span>
-                <input type="text" class="form-control" id="cNome" placeholder="Nome Completo" />
-            </div>
-            <br />
-            <div class="input-group">
-                <span class="input-group-addon">Data de Nascimento:  </span>
-                <input type="date" class="form-control" id="cNasc" />
-            </div>
-            <br />
-            <div class="input-group">
-                <span class="input-group-addon">Cidade: </span>
-                <input type="text" class="form-control" id="cEnd" placeholder="Nome da cidade" />
-            </div>
-            <br />
-            <div class="input-group">
-                <span class="input-group-addon">Rua: </span>
-                <input id="cRua" type="text" class="form-control" placeholder="Nome da Rua">
-            </div>
-            <br />
-
-            <div id="corpo">
-                <div class="input-group">
-                    <span class="input-group-addon">CEP: </span>
-                    <input type="text" class="form-control" id="cCep" placeholder="CEP" />
-            </div>
-            <br />
-            <div class="input-group">
-                    <span class="input-group-addon">Bairro: </span>
-                    <input type="text" class="form-control" id="cBar" placeholder="Bairro" />
-                </div>
-                <br />
-                <div class="input-group">
-                    <span class="input-group-addon">Telefone: </span>
-                    <input type="tel" class="form-control" id="cFone" placeholder="Telefone"/>
-                </div>
-                <br />
-                <fieldset id="campoSex">
-                    <legend>Sexo</legend>
+    <fieldset id="campoCliente">
+        <legend>Dados do Cliente</legend>
+        <div class="row">
+            <div class="col-sm-5 col-md-6">
                     <div class="input-group">
-                        <label>Homem: </label>
-                        <input type="radio" name="r" class="form-control" id="cMasc" />
+                        <span class="input-group-addon">Nome: </span>
+                        <input type="text" class="form-control" id="cNome" placeholder="Nome Completo" />
                     </div>
                     <br />
-                    <div class="input-group" id="M">
-                        <label>Mulher: </label>
-                        <input type="radio" name="r" class="form-control" id="cFem" />
+                    <div class="input-group">
+                        <span class="input-group-addon">Data de Nascimento:  </span>
+                        <input type="date" class="form-control" id="cNasc" />
                     </div>
-                </fieldset>
-                <br />
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon">Cidade: </span>
+                        <input type="text" class="form-control" id="cEnd" placeholder="Nome da cidade" />
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon">Rua: </span>
+                        <input id="cRua" type="text" class="form-control" placeholder="Nome da Rua">
+                    </div>
+                    <br />
             </div>
-        </fieldset>
-        <div id="btnAction">
-            <button id="btnSalvar" type="button" class="btn btn-primary btn-lg">SALVAR</button>
-            <button id="btnCancelar" type="button" class="btn btn-primary btn-lg">CANCELAR</button>
+            <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">
+                <div id="corpo">
+                    <div class="input-group">
+                        <span class="input-group-addon">CEP: </span>
+                        <input type="text" class="form-control" id="cCep" placeholder="CEP" />
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon">Bairro: </span>
+                        <input type="text" class="form-control" id="cBar" placeholder="Bairro" />
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon">Telefone: </span>
+                        <input type="tel" class="form-control" id="cFone" placeholder="Telefone" />
+                    </div>
+                    <br />
+                    <fieldset id="campoSex">
+                        <legend>Sexo</legend>
+                        <div class="col-xs-3 ">
+                            <div class="input-group">
+                                <label>Homem: </label>
+                                <input type="radio" name="r" class="form-control" id="cMasc" />
+                            </div>
+                        </div>
+                        <div class="col-xs-3 ">
+                            <div class="input-group" id="M">
+                                <label>Mulher: </label>
+                                <input type="radio" name="r" class="form-control" id="cFem" />
+                            </div>
+                        </div>
+                    </fieldset>
+                    <br />
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div id="btnAction">
+                    <button id="btnSalvar" type="button" class="btn btn-primary btn-lg">SALVAR</button>
+                    <button id="btnCancelar" type="button" class="btn btn-primary btn-lg">CANCELAR</button>
+                </div>
+            </div>
+        </div>
+    </fieldset>
 </body>
 </html>
