@@ -8,21 +8,21 @@ namespace XtrapSolution.Controllers
 {
     public class ListasController : Controller
     {
-        // GET: Lista
-        public ActionResult ListaProdutos()
+        /*// GET: Lista
+        public ActionResult LProdutos()
         {
-            ViewBag.Title = "ListaProdutos";
+            ViewBag.Title = "LProdutos";
             return View();
         }
-        public ActionResult ListaFornecedores()
+        public ActionResult LFornecedores()
         {
-            ViewBag.Title = "ListaFornecedores";
+            ViewBag.Title = "LFornecedores";
             return View();
         }
-        public ActionResult ListaClientes()
+        public ActionResult LClientes()
         {
-            ViewBag.Title = "ListaClientes";
+            ViewBag.Title = "LClientes";
             return View();
-        }
+        }*/
     }
 }
